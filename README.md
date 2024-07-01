@@ -6,6 +6,14 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+### Descripción de los pasos seguidos
+1. Hice un fork del repositorio original en GitHub.
+2. Cloné el repositorio fork en mi máquina local usando el comando `git clone https://github.com/tu-usuario/repositorio-fork.git`.
+3. Navegué al directorio del repositorio clonado con `cd repositorio-fork`.
+4. Realicé los cambios necesarios en el código.
+5. Agregué los archivos modificados al área de preparación con `git add .`.
+6. Confirmé los cambios con `git commit -m "Descripción de los cambios realizados"`.
+7. Envié los cambios a mi fork en GitHub con `git push origin main`.
 
 ## About Laravel
 
