@@ -6,69 +6,66 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-### Descripción de los pasos seguidos
-1. Hice un fork del repositorio original en GitHub.
-2. Cloné el repositorio fork en mi máquina local usando el comando `git clone https://github.com/tu-usuario/repositorio-fork.git`.
-3. Navegué al directorio del repositorio clonado con `cd repositorio-fork`.
-4. Realicé los cambios necesarios en el código.
-5. Agregué los archivos modificados al área de preparación con `git add .`.
-6. Confirmé los cambios con `git commit -m "Descripción de los cambios realizados"`.
-7. Envié los cambios a mi fork en GitHub con `git push origin main`.
+### Configuración del Proyecto
+## Paso 1: Crear un Fork del Repositorio
+- Inicio sesión en mi cuenta de GitHub.
+- Navego al repositorio original del proyecto Laravel que deseo forkar.
+- En la esquina superior derecha de la página del repositorio, hago clic en el botón "Fork" para crear una copia del repositorio en mi cuenta de GitHub.
 
-## About Laravel
+## Paso 2: Clonar el Repositorio en mi Máquina Local
+- Abro Visual Studio Code.
+- Accedo a la "Command Palette" mediante el menú View > Command Palette o utilizando el atajo Ctrl+Shift+P.
+- En la "Command Palette", escribo Git: Clone y selecciono la opción correspondiente.
+- Ingreso la URL del fork del repositorio que creé en GitHub.
+- Elijo una ubicación en mi máquina local donde deseo clonar el repositorio.
+- Una vez clonado, Visual Studio Code me pregunta si deseo abrir el repositorio. Acepto para abrir el proyecto en Visual Studio Code.
+  
+## Paso 3: Instalación de Dependencias
+- Abro la terminal integrada en Visual Studio Code seleccionando View > Terminal.
+- En la terminal, instalo las dependencias de PHP ejecutando el siguiente comando:
+- composer update
+- Luego, instalo las dependencias de JavaScript utilizando npm:
+- npm install
+  
+## Paso 4: Configuración del Archivo .env
+- En el Explorador de Archivos de Visual Studio Code, encuentro el archivo env.example.
+- Hago clic derecho en el archivo y selecciono "Copy".
+- Pego la copia en la carpeta raíz del proyecto y la renombro a .env.
+- Abro el archivo .env y configuro los detalles de la conexión a la base de datos según mi entorno local.
+  
+## Paso 5: Ejecutar Migraciones y Seeders
+- En la terminal integrada de Visual Studio Code, realizo las migraciones de la base de datos para crear las tablas necesarias:
+- php artisan migrate:install
+- php artisan migrate:fresh
+  
+## Paso 6: Generación de la Key de Laravel
+- En la terminal integrada de Visual Studio Code, genero la clave de la aplicación Laravel ejecutando:
+- php artisan key:generate
+  
+## Paso 7: Servir la Aplicación y Compilar Recursos
+- Inicio el servidor de desarrollo de Laravel:
+- php artisan serve
+- Compilo los recursos front-end utilizando npm:
+- npm run dev
+  
+## Paso 8: Verificar la Configuración
+- Abro mi navegador web y voy a http://localhost:8000 para verificar que el servidor de desarrollo de Laravel esté funcionando correctamente.
+- Me aseguro de que todos los recursos front-end se hayan compilado y cargado correctamente.
+  
+## Paso 9: Trabajar en mi Proyecto
+- Con mi entorno de desarrollo configurado, puedo comenzar a trabajar en mi proyecto de Laravel.
+- Realizo cambios en mi código y utilizo la terminal integrada en Visual Studio Code para ejecutar los comandos de Artisan, Composer y npm según sea necesario.
+  
+## Paso 10: Gestionar el Control de Versiones
+- Utilizo Git para gestionar los cambios en mi proyecto. Puedo hacer commits, crear ramas y enviar mis cambios al fork en mi cuenta de GitHub.
+- Cuando estoy listo para fusionar mis cambios con el repositorio original, puedo crear un pull request desde mi fork.
+  
+## Paso 11: Configuración de Usuarios en MySQL Workbench
+- Abro MySQL Workbench y me conecto a la base de datos que está configurada en mi archivo .env.
+- Navego a la base de datos correspondiente en el panel de la izquierda.
+- Encuentro y selecciono la tabla users (o la tabla que almacena la información de los usuarios).
+- Hago clic derecho sobre la tabla users y selecciono "Select Rows" para ver los registros de la tabla.
+- Localizo el registro del usuario al que deseo asignar el tipo admin.
+- En la columna usertype, cambio el valor a admin para el usuario seleccionado.
+- Guardo los cambios y verifico que se hayan aplicado correctamente.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
